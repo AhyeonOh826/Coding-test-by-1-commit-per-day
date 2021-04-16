@@ -22,7 +22,7 @@ public class Day2 {
 			 System.out.println("target : " + target); 
 			 
 			 // n이 k보다 작을 때(더 이상 나눌 수 없을 때)반복문탈출 
-			 cntResult += ( n- target); 
+			 cntResult += ( n - target); 
 			 System.out.println("cntResult : " + cntResult);
 			 
 			 n = target; 
@@ -36,12 +36,12 @@ public class Day2 {
 				cntResult++;
 				// 
 				n /= k;
-				System.out.println("횟수1 : "+cntResult);
-				System.out.println("n /= k : "+ n);
+				System.out.println("횟수1 : " + cntResult);
+				System.out.println("n /= k : " + n);
 			}
 		};
 		cntResult += (n - 1);
-		System.out.println("횟수2 : "+cntResult);
+		System.out.println("횟수2 : "+ cntResult);
 	}
 
 }
