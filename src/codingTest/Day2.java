@@ -1,12 +1,17 @@
 package codingTest;
 
+import java.util.Scanner;
+
 public class Day2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// 1이 될때까지 최소 횟수 값(최대한 빠르게)
-		int n = 27;
-		int k = 3;
+		Scanner sc = new Scanner(System.in);
+		
+		
+		int n = sc.nextInt();
+		int k = sc.nextInt();
 		
 		// 횟수
 		int cntResult = 0;
@@ -14,7 +19,7 @@ public class Day2 {
 		int target;
 		
 		// n이 k보다 크면
-		while(n > k) {
+		while(true) {
 			
 			 //n이 k로 나누어 떨어지는 수가 될 때가지 뺴기
 			 // 항상 k의 배수가 된다
@@ -29,16 +34,15 @@ public class Day2 {
 			 System.out.println("n : " + n);
 					
 			// n이 k보다 크면 break
-			if(n < k) {
-				break;
-			}else {
+			if(n < k) break;
+			
 				// 1씩 증감
 				cntResult++;
 				// 
 				n /= k;
 				System.out.println("횟수1 : " + cntResult);
 				System.out.println("n /= k : " + n);
-			}
+			
 		};
 		cntResult += (n - 1);
 		System.out.println("횟수2 : "+ cntResult);
